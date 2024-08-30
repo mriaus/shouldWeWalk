@@ -158,6 +158,7 @@
 		8DEF05932C81F1F900433792 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				8DEF05A12C81F9BD00433792 /* Components */,
 				8DEF05962C81F2E000433792 /* ViewModels */,
 				8DEF05952C81F2D900433792 /* Views */,
 			);
@@ -175,9 +176,8 @@
 		8DEF05952C81F2D900433792 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				8DEF05A22C81F9D600433792 /* MainScreen */,
 				8DEF05A02C81F42D00433792 /* LaunchScreen */,
-				8DEF055E2C81F00000433792 /* ViewController.swift */,
-				8DEF05602C81F00000433792 /* Main.storyboard */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -261,6 +261,22 @@
 				8DEF05682C81F00200433792 /* LaunchScreen.storyboard */,
 			);
 			path = LaunchScreen;
+			sourceTree = "<group>";
+		};
+		8DEF05A12C81F9BD00433792 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		8DEF05A22C81F9D600433792 /* MainScreen */ = {
+			isa = PBXGroup;
+			children = (
+				8DEF055E2C81F00000433792 /* ViewController.swift */,
+				8DEF05602C81F00000433792 /* Main.storyboard */,
+			);
+			path = MainScreen;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
