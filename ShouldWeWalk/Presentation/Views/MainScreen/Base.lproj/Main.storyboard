@@ -17,25 +17,22 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hola Mundo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AJM-TV-eip">
-                                <rect key="frame" x="150" y="416" width="92" height="21"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="21" id="Mge-cg-IYi"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FEj-aX-hUa">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="299"/>
+                            </containerView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="AJM-TV-eip" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="357" id="E1M-Lq-eHh"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="AJM-TV-eip" secondAttribute="bottom" constant="381" id="THQ-Se-jNL"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="AJM-TV-eip" secondAttribute="trailing" constant="151" id="WYI-2H-800"/>
-                            <constraint firstItem="AJM-TV-eip" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="150" id="t2z-sy-hbT"/>
+                            <constraint firstItem="FEj-aX-hUa" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="4fi-Yw-xis"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="FEj-aX-hUa" secondAttribute="trailing" id="HaY-pb-Y9m"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="FEj-aX-hUa" secondAttribute="bottom" constant="519" id="je1-WT-3wE"/>
+                            <constraint firstItem="FEj-aX-hUa" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="-59" id="rZD-dE-m4K"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="containerView" destination="FEj-aX-hUa" id="uaC-ab-APO"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

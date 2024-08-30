@@ -18,6 +18,10 @@
 		8DEF057F2C81F00200433792 /* ShouldWeWalkUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DEF057E2C81F00200433792 /* ShouldWeWalkUITests.swift */; };
 		8DEF05812C81F00200433792 /* ShouldWeWalkUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DEF05802C81F00200433792 /* ShouldWeWalkUITestsLaunchTests.swift */; };
 		8DEF05902C81F15C00433792 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 8DEF058F2C81F15C00433792 /* .gitignore */; };
+		8DEF05A42C81FBC600433792 /* CurrentTemperatureView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8DEF05A32C81FBC600433792 /* CurrentTemperatureView.xib */; };
+		8DEF05A72C81FF4400433792 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 8DEF05A62C81FF4400433792 /* Lottie */; };
+		8DEF05AA2C82001700433792 /* CurrentTemperatureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DEF05A92C82001700433792 /* CurrentTemperatureViewController.swift */; };
+		8DEF05AC2C82034D00433792 /* heatAnimation.json in Resources */ = {isa = PBXBuildFile; fileRef = 8DEF05AB2C82034D00433792 /* heatAnimation.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +59,9 @@
 		8DEF058D2C81F09A00433792 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Main.strings; sourceTree = "<group>"; };
 		8DEF058E2C81F09A00433792 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		8DEF058F2C81F15C00433792 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		8DEF05A32C81FBC600433792 /* CurrentTemperatureView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CurrentTemperatureView.xib; sourceTree = "<group>"; };
+		8DEF05A92C82001700433792 /* CurrentTemperatureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentTemperatureViewController.swift; sourceTree = "<group>"; };
+		8DEF05AB2C82034D00433792 /* heatAnimation.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = heatAnimation.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +69,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8DEF05A72C81FF4400433792 /* Lottie in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -110,8 +118,8 @@
 				8DEF059E2C81F3E000433792 /* Network */,
 				8DEF05922C81F1F000433792 /* Domain */,
 				8DEF05942C81F20200433792 /* Resources */,
-				8DEF05932C81F1F900433792 /* Presentation */,
 				8DEF05912C81F1E700433792 /* Data */,
+				8DEF05932C81F1F900433792 /* Presentation */,
 				8DEF055A2C81F00000433792 /* AppDelegate.swift */,
 				8DEF055C2C81F00000433792 /* SceneDelegate.swift */,
 				8DEF056B2C81F00200433792 /* Info.plist */,
@@ -168,6 +176,8 @@
 		8DEF05942C81F20200433792 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				8DEF05AE2C8286A200433792 /* LocalData */,
+				8DEF05AD2C82869700433792 /* Animations */,
 				8DEF05662C81F00200433792 /* Assets.xcassets */,
 			);
 			path = Resources;
@@ -266,6 +276,7 @@
 		8DEF05A12C81F9BD00433792 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				8DEF05A82C81FFE000433792 /* CurrentTemperatureView */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -277,6 +288,30 @@
 				8DEF05602C81F00000433792 /* Main.storyboard */,
 			);
 			path = MainScreen;
+			sourceTree = "<group>";
+		};
+		8DEF05A82C81FFE000433792 /* CurrentTemperatureView */ = {
+			isa = PBXGroup;
+			children = (
+				8DEF05A32C81FBC600433792 /* CurrentTemperatureView.xib */,
+				8DEF05A92C82001700433792 /* CurrentTemperatureViewController.swift */,
+			);
+			path = CurrentTemperatureView;
+			sourceTree = "<group>";
+		};
+		8DEF05AD2C82869700433792 /* Animations */ = {
+			isa = PBXGroup;
+			children = (
+				8DEF05AB2C82034D00433792 /* heatAnimation.json */,
+			);
+			path = Animations;
+			sourceTree = "<group>";
+		};
+		8DEF05AE2C8286A200433792 /* LocalData */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = LocalData;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -295,6 +330,9 @@
 			dependencies = (
 			);
 			name = ShouldWeWalk;
+			packageProductDependencies = (
+				8DEF05A62C81FF4400433792 /* Lottie */,
+			);
 			productName = ShouldWeWalk;
 			productReference = 8DEF05572C81F00000433792 /* ShouldWeWalk.app */;
 			productType = "com.apple.product-type.application";
@@ -368,6 +406,9 @@
 				es,
 			);
 			mainGroup = 8DEF054E2C81F00000433792;
+			packageReferences = (
+				8DEF05A52C81FF4400433792 /* XCRemoteSwiftPackageReference "lottie-ios" */,
+			);
 			productRefGroup = 8DEF05582C81F00000433792 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -386,8 +427,10 @@
 			files = (
 				8DEF05902C81F15C00433792 /* .gitignore in Resources */,
 				8DEF05672C81F00200433792 /* Assets.xcassets in Resources */,
+				8DEF05A42C81FBC600433792 /* CurrentTemperatureView.xib in Resources */,
 				8DEF056A2C81F00200433792 /* Base in Resources */,
 				8DEF05622C81F00000433792 /* Base in Resources */,
+				8DEF05AC2C82034D00433792 /* heatAnimation.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -416,6 +459,7 @@
 				8DEF055B2C81F00000433792 /* AppDelegate.swift in Sources */,
 				8DEF055D2C81F00000433792 /* SceneDelegate.swift in Sources */,
 				8DEF05652C81F00000433792 /* ShouldWeWalk.xcdatamodeld in Sources */,
+				8DEF05AA2C82001700433792 /* CurrentTemperatureViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -768,6 +812,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		8DEF05A52C81FF4400433792 /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/airbnb/lottie-ios.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.5.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		8DEF05A62C81FF4400433792 /* Lottie */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8DEF05A52C81FF4400433792 /* XCRemoteSwiftPackageReference "lottie-ios" */;
+			productName = Lottie;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		8DEF05632C81F00000433792 /* ShouldWeWalk.xcdatamodeld */ = {
