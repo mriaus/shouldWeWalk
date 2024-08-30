@@ -17,6 +17,7 @@
 		8DEF05752C81F00200433792 /* ShouldWeWalkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DEF05742C81F00200433792 /* ShouldWeWalkTests.swift */; };
 		8DEF057F2C81F00200433792 /* ShouldWeWalkUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DEF057E2C81F00200433792 /* ShouldWeWalkUITests.swift */; };
 		8DEF05812C81F00200433792 /* ShouldWeWalkUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DEF05802C81F00200433792 /* ShouldWeWalkUITestsLaunchTests.swift */; };
+		8DEF05902C81F15C00433792 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 8DEF058F2C81F15C00433792 /* .gitignore */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,9 @@
 		8DEF057A2C81F00200433792 /* ShouldWeWalkUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ShouldWeWalkUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8DEF057E2C81F00200433792 /* ShouldWeWalkUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShouldWeWalkUITests.swift; sourceTree = "<group>"; };
 		8DEF05802C81F00200433792 /* ShouldWeWalkUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShouldWeWalkUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		8DEF058D2C81F09A00433792 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Main.strings; sourceTree = "<group>"; };
+		8DEF058E2C81F09A00433792 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		8DEF058F2C81F15C00433792 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +85,7 @@
 		8DEF054E2C81F00000433792 = {
 			isa = PBXGroup;
 			children = (
+				8DEF058F2C81F15C00433792 /* .gitignore */,
 				8DEF05592C81F00000433792 /* ShouldWeWalk */,
 				8DEF05732C81F00200433792 /* ShouldWeWalkTests */,
 				8DEF057D2C81F00200433792 /* ShouldWeWalkUITests */,
@@ -101,12 +106,14 @@
 		8DEF05592C81F00000433792 /* ShouldWeWalk */ = {
 			isa = PBXGroup;
 			children = (
+				8DEF059F2C81F3FC00433792 /* Utils */,
+				8DEF059E2C81F3E000433792 /* Network */,
+				8DEF05922C81F1F000433792 /* Domain */,
+				8DEF05942C81F20200433792 /* Resources */,
+				8DEF05932C81F1F900433792 /* Presentation */,
+				8DEF05912C81F1E700433792 /* Data */,
 				8DEF055A2C81F00000433792 /* AppDelegate.swift */,
 				8DEF055C2C81F00000433792 /* SceneDelegate.swift */,
-				8DEF055E2C81F00000433792 /* ViewController.swift */,
-				8DEF05602C81F00000433792 /* Main.storyboard */,
-				8DEF05662C81F00200433792 /* Assets.xcassets */,
-				8DEF05682C81F00200433792 /* LaunchScreen.storyboard */,
 				8DEF056B2C81F00200433792 /* Info.plist */,
 				8DEF05632C81F00000433792 /* ShouldWeWalk.xcdatamodeld */,
 			);
@@ -128,6 +135,132 @@
 				8DEF05802C81F00200433792 /* ShouldWeWalkUITestsLaunchTests.swift */,
 			);
 			path = ShouldWeWalkUITests;
+			sourceTree = "<group>";
+		};
+		8DEF05912C81F1E700433792 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				8DEF05992C81F38B00433792 /* Model */,
+				8DEF059A2C81F39800433792 /* Repository */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		8DEF05922C81F1F000433792 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				8DEF05972C81F34800433792 /* Protocols */,
+				8DEF05982C81F35000433792 /* UseCases */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		8DEF05932C81F1F900433792 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				8DEF05962C81F2E000433792 /* ViewModels */,
+				8DEF05952C81F2D900433792 /* Views */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		8DEF05942C81F20200433792 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				8DEF05662C81F00200433792 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		8DEF05952C81F2D900433792 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				8DEF05A02C81F42D00433792 /* LaunchScreen */,
+				8DEF055E2C81F00000433792 /* ViewController.swift */,
+				8DEF05602C81F00000433792 /* Main.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		8DEF05962C81F2E000433792 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		8DEF05972C81F34800433792 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		8DEF05982C81F35000433792 /* UseCases */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UseCases;
+			sourceTree = "<group>";
+		};
+		8DEF05992C81F38B00433792 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8DEF059D2C81F3C200433792 /* DTO */,
+				8DEF059C2C81F3BC00433792 /* Local */,
+				8DEF059B2C81F3B300433792 /* Presentation */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		8DEF059A2C81F39800433792 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		8DEF059B2C81F3B300433792 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		8DEF059C2C81F3BC00433792 /* Local */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Local;
+			sourceTree = "<group>";
+		};
+		8DEF059D2C81F3C200433792 /* DTO */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DTO;
+			sourceTree = "<group>";
+		};
+		8DEF059E2C81F3E000433792 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		8DEF059F2C81F3FC00433792 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		8DEF05A02C81F42D00433792 /* LaunchScreen */ = {
+			isa = PBXGroup;
+			children = (
+				8DEF05682C81F00200433792 /* LaunchScreen.storyboard */,
+			);
+			path = LaunchScreen;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -216,6 +349,7 @@
 			knownRegions = (
 				en,
 				Base,
+				es,
 			);
 			mainGroup = 8DEF054E2C81F00000433792;
 			productRefGroup = 8DEF05582C81F00000433792 /* Products */;
@@ -234,6 +368,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8DEF05902C81F15C00433792 /* .gitignore in Resources */,
 				8DEF05672C81F00200433792 /* Assets.xcassets in Resources */,
 				8DEF056A2C81F00200433792 /* Base in Resources */,
 				8DEF05622C81F00000433792 /* Base in Resources */,
@@ -305,6 +440,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				8DEF05612C81F00000433792 /* Base */,
+				8DEF058D2C81F09A00433792 /* es */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -313,6 +449,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				8DEF05692C81F00200433792 /* Base */,
+				8DEF058E2C81F09A00433792 /* es */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -325,6 +462,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -388,6 +526,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -454,6 +593,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -482,6 +622,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
