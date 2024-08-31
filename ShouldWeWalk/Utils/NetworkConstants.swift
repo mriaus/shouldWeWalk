@@ -7,17 +7,17 @@
 
 import Foundation
 
-let server = "https://api.openweathermap.org/data/2.5"
+public let SERVER = "https://api.openweathermap.org/data/2.5"
 
-struct HTTPMethods {
+struct HTTPMETHODS {
     static let post = "POST"
     static let get = "GET"
     static let put = "PUT"
     static let delete = "DELETE"
 }
-let contentType = "application/json"
+let CONTENTTYPE = "application/json"
 
-enum endpoints: String {
+enum ENDPOINTS: String {
     case weather = "/weather"
 
 }

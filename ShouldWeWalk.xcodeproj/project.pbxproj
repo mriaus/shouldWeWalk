@@ -19,6 +19,7 @@
 		8DD0150E2C835701006957DE /* WeatherService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD0150D2C835701006957DE /* WeatherService.swift */; };
 		8DD015102C83576E006957DE /* NetworkConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD0150F2C83576E006957DE /* NetworkConstants.swift */; };
 		8DD015132C835BFF006957DE /* SwiftDotenv in Frameworks */ = {isa = PBXBuildFile; productRef = 8DD015122C835BFF006957DE /* SwiftDotenv */; };
+		8DD015182C835EBC006957DE /* GetEnvData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD015172C835EBC006957DE /* GetEnvData.swift */; };
 		8DEF055B2C81F00000433792 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DEF055A2C81F00000433792 /* AppDelegate.swift */; };
 		8DEF055D2C81F00000433792 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DEF055C2C81F00000433792 /* SceneDelegate.swift */; };
 		8DEF055F2C81F00000433792 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DEF055E2C81F00000433792 /* ViewController.swift */; };
@@ -69,6 +70,7 @@
 		8DD0150B2C8356B5006957DE /* WeatherServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherServiceProtocol.swift; sourceTree = "<group>"; };
 		8DD0150D2C835701006957DE /* WeatherService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherService.swift; sourceTree = "<group>"; };
 		8DD0150F2C83576E006957DE /* NetworkConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkConstants.swift; sourceTree = "<group>"; };
+		8DD015172C835EBC006957DE /* GetEnvData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetEnvData.swift; sourceTree = "<group>"; };
 		8DEF05572C81F00000433792 /* ShouldWeWalk.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShouldWeWalk.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8DEF055A2C81F00000433792 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8DEF055C2C81F00000433792 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -313,6 +315,7 @@
 				8DEF05B62C833C9600433792 /* Utils.swift */,
 				8DD015042C835440006957DE /* Extension+URLResponse.swift */,
 				8DD0150F2C83576E006957DE /* NetworkConstants.swift */,
+				8DD015172C835EBC006957DE /* GetEnvData.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -531,6 +534,7 @@
 				8DEF055D2C81F00000433792 /* SceneDelegate.swift in Sources */,
 				8DD015032C8353E2006957DE /* GetWeatherUseCase.swift in Sources */,
 				8DEF05B92C833D5B00433792 /* MainScreenViewModel.swift in Sources */,
+				8DD015182C835EBC006957DE /* GetEnvData.swift in Sources */,
 				8DEF05652C81F00000433792 /* ShouldWeWalk.xcdatamodeld in Sources */,
 				8DD0150E2C835701006957DE /* WeatherService.swift in Sources */,
 				8DEF05AA2C82001700433792 /* CurrentTemperatureViewController.swift in Sources */,

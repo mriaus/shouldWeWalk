@@ -6,7 +6,7 @@
 //
 
 import Foundation
-
+import Combine
 protocol WeatherServiceProtocol{
-    func signIn(userName: String?, password: String?) -> AnyPublisher<LoginResponse, Error>
+    func GetWheater(lat: String?, long: String?) -> AnyPublisher<WeatherDTO, Error>
 }

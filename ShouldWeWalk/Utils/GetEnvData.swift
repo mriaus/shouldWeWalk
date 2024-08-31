@@ -6,3 +6,25 @@
 //
 
 import Foundation
+import SwiftDotenv
+
+final class GetEnvData {
+
+    static let shared = GetEnvData()
+    
+    
+    private init() {
+        // Configura Dotenv para cargar el archivo .env
+        do {
+            try Dotenv.configure()
+        } catch {
+            print("Error al configurar Dotenv: \(error)")
+        }
+    }
+
+    var apiKey: String? {
+        return Dotenv["API_KEY"]?.stringValue
+    }
+
+
+}

@@ -10,4 +10,12 @@ import Combine
 
 struct WeatherRepository: WeatherServiceProtocol {
     
+    func GetWheater(lat: String?, long: String?) -> AnyPublisher<WeatherDTO, any Error> {
+        fatalError()
+    }
+    
+    
+    init(isMocked: Bool){
+        
+    }
 }
