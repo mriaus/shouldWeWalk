@@ -7,6 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8DD014FB2C83488B006957DE /* CurrentTemperatureViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD014FA2C83488B006957DE /* CurrentTemperatureViewModel.swift */; };
+		8DD014FD2C834DE8006957DE /* WeatherMockedData.json in Resources */ = {isa = PBXBuildFile; fileRef = 8DD014FC2C834D96006957DE /* WeatherMockedData.json */; };
+		8DD014FF2C834E22006957DE /* WeatherModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD014FE2C834E22006957DE /* WeatherModel.swift */; };
+		8DD015012C835278006957DE /* WeatherDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD015002C835278006957DE /* WeatherDTO.swift */; };
+		8DD015032C8353E2006957DE /* GetWeatherUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD015022C8353E2006957DE /* GetWeatherUseCase.swift */; };
+		8DD015052C835440006957DE /* Extension+URLResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD015042C835440006957DE /* Extension+URLResponse.swift */; };
+		8DD015082C835575006957DE /* GetWeatherProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD015072C835575006957DE /* GetWeatherProtocol.swift */; };
+		8DD0150A2C835657006957DE /* WeatherRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD015092C835657006957DE /* WeatherRepository.swift */; };
+		8DD0150C2C8356B5006957DE /* WeatherServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD0150B2C8356B5006957DE /* WeatherServiceProtocol.swift */; };
+		8DD0150E2C835701006957DE /* WeatherService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD0150D2C835701006957DE /* WeatherService.swift */; };
+		8DD015102C83576E006957DE /* NetworkConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD0150F2C83576E006957DE /* NetworkConstants.swift */; };
+		8DD015132C835BFF006957DE /* SwiftDotenv in Frameworks */ = {isa = PBXBuildFile; productRef = 8DD015122C835BFF006957DE /* SwiftDotenv */; };
 		8DEF055B2C81F00000433792 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DEF055A2C81F00000433792 /* AppDelegate.swift */; };
 		8DEF055D2C81F00000433792 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DEF055C2C81F00000433792 /* SceneDelegate.swift */; };
 		8DEF055F2C81F00000433792 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DEF055E2C81F00000433792 /* ViewController.swift */; };
@@ -46,6 +58,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8DD014FA2C83488B006957DE /* CurrentTemperatureViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentTemperatureViewModel.swift; sourceTree = "<group>"; };
+		8DD014FC2C834D96006957DE /* WeatherMockedData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = WeatherMockedData.json; sourceTree = "<group>"; };
+		8DD014FE2C834E22006957DE /* WeatherModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherModel.swift; sourceTree = "<group>"; };
+		8DD015002C835278006957DE /* WeatherDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherDTO.swift; sourceTree = "<group>"; };
+		8DD015022C8353E2006957DE /* GetWeatherUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetWeatherUseCase.swift; sourceTree = "<group>"; };
+		8DD015042C835440006957DE /* Extension+URLResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+URLResponse.swift"; sourceTree = "<group>"; };
+		8DD015072C835575006957DE /* GetWeatherProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetWeatherProtocol.swift; sourceTree = "<group>"; };
+		8DD015092C835657006957DE /* WeatherRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherRepository.swift; sourceTree = "<group>"; };
+		8DD0150B2C8356B5006957DE /* WeatherServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherServiceProtocol.swift; sourceTree = "<group>"; };
+		8DD0150D2C835701006957DE /* WeatherService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherService.swift; sourceTree = "<group>"; };
+		8DD0150F2C83576E006957DE /* NetworkConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkConstants.swift; sourceTree = "<group>"; };
 		8DEF05572C81F00000433792 /* ShouldWeWalk.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShouldWeWalk.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8DEF055A2C81F00000433792 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8DEF055C2C81F00000433792 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -77,6 +100,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8DD015132C835BFF006957DE /* SwiftDotenv in Frameworks */,
 				8DEF05A72C81FF4400433792 /* Lottie in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -98,6 +122,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8DD015062C8354A4006957DE /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				8DD0150D2C835701006957DE /* WeatherService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		8DEF054E2C81F00000433792 = {
 			isa = PBXGroup;
 			children = (
@@ -211,6 +243,8 @@
 		8DEF05972C81F34800433792 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
+				8DD015072C835575006957DE /* GetWeatherProtocol.swift */,
+				8DD0150B2C8356B5006957DE /* WeatherServiceProtocol.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -218,6 +252,7 @@
 		8DEF05982C81F35000433792 /* UseCases */ = {
 			isa = PBXGroup;
 			children = (
+				8DD015022C8353E2006957DE /* GetWeatherUseCase.swift */,
 			);
 			path = UseCases;
 			sourceTree = "<group>";
@@ -235,6 +270,7 @@
 		8DEF059A2C81F39800433792 /* Repository */ = {
 			isa = PBXGroup;
 			children = (
+				8DD015092C835657006957DE /* WeatherRepository.swift */,
 			);
 			path = Repository;
 			sourceTree = "<group>";
@@ -242,6 +278,7 @@
 		8DEF059B2C81F3B300433792 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				8DD014FE2C834E22006957DE /* WeatherModel.swift */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -257,6 +294,7 @@
 		8DEF059D2C81F3C200433792 /* DTO */ = {
 			isa = PBXGroup;
 			children = (
+				8DD015002C835278006957DE /* WeatherDTO.swift */,
 			);
 			path = DTO;
 			sourceTree = "<group>";
@@ -264,6 +302,7 @@
 		8DEF059E2C81F3E000433792 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				8DD015062C8354A4006957DE /* Services */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -272,6 +311,8 @@
 			isa = PBXGroup;
 			children = (
 				8DEF05B62C833C9600433792 /* Utils.swift */,
+				8DD015042C835440006957DE /* Extension+URLResponse.swift */,
+				8DD0150F2C83576E006957DE /* NetworkConstants.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -307,6 +348,7 @@
 			children = (
 				8DEF05A32C81FBC600433792 /* CurrentTemperatureView.xib */,
 				8DEF05A92C82001700433792 /* CurrentTemperatureViewController.swift */,
+				8DD014FA2C83488B006957DE /* CurrentTemperatureViewModel.swift */,
 			);
 			path = CurrentTemperatureView;
 			sourceTree = "<group>";
@@ -323,6 +365,7 @@
 			isa = PBXGroup;
 			children = (
 				8DEF05B12C828A4000433792 /* DogsData.json */,
+				8DD014FC2C834D96006957DE /* WeatherMockedData.json */,
 			);
 			path = LocalData;
 			sourceTree = "<group>";
@@ -352,6 +395,7 @@
 			name = ShouldWeWalk;
 			packageProductDependencies = (
 				8DEF05A62C81FF4400433792 /* Lottie */,
+				8DD015122C835BFF006957DE /* SwiftDotenv */,
 			);
 			productName = ShouldWeWalk;
 			productReference = 8DEF05572C81F00000433792 /* ShouldWeWalk.app */;
@@ -428,6 +472,7 @@
 			mainGroup = 8DEF054E2C81F00000433792;
 			packageReferences = (
 				8DEF05A52C81FF4400433792 /* XCRemoteSwiftPackageReference "lottie-ios" */,
+				8DD015112C835BFF006957DE /* XCRemoteSwiftPackageReference "swift-dotenv" */,
 			);
 			productRefGroup = 8DEF05582C81F00000433792 /* Products */;
 			projectDirPath = "";
@@ -450,6 +495,7 @@
 				8DEF05B02C82874500433792 /* heatAnimationBG.json in Resources */,
 				8DEF05A42C81FBC600433792 /* CurrentTemperatureView.xib in Resources */,
 				8DEF056A2C81F00200433792 /* Base in Resources */,
+				8DD014FD2C834DE8006957DE /* WeatherMockedData.json in Resources */,
 				8DEF05622C81F00000433792 /* Base in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -476,14 +522,24 @@
 			buildActionMask = 2147483647;
 			files = (
 				8DEF05B22C828A4000433792 /* DogsData.json in Sources */,
+				8DD015102C83576E006957DE /* NetworkConstants.swift in Sources */,
 				8DEF05B52C833BB300433792 /* Dog.swift in Sources */,
+				8DD0150C2C8356B5006957DE /* WeatherServiceProtocol.swift in Sources */,
+				8DD0150A2C835657006957DE /* WeatherRepository.swift in Sources */,
 				8DEF055F2C81F00000433792 /* ViewController.swift in Sources */,
 				8DEF055B2C81F00000433792 /* AppDelegate.swift in Sources */,
 				8DEF055D2C81F00000433792 /* SceneDelegate.swift in Sources */,
+				8DD015032C8353E2006957DE /* GetWeatherUseCase.swift in Sources */,
 				8DEF05B92C833D5B00433792 /* MainScreenViewModel.swift in Sources */,
 				8DEF05652C81F00000433792 /* ShouldWeWalk.xcdatamodeld in Sources */,
+				8DD0150E2C835701006957DE /* WeatherService.swift in Sources */,
 				8DEF05AA2C82001700433792 /* CurrentTemperatureViewController.swift in Sources */,
 				8DEF05B72C833C9600433792 /* Utils.swift in Sources */,
+				8DD015052C835440006957DE /* Extension+URLResponse.swift in Sources */,
+				8DD014FB2C83488B006957DE /* CurrentTemperatureViewModel.swift in Sources */,
+				8DD015012C835278006957DE /* WeatherDTO.swift in Sources */,
+				8DD014FF2C834E22006957DE /* WeatherModel.swift in Sources */,
+				8DD015082C835575006957DE /* GetWeatherProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -838,6 +894,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		8DD015112C835BFF006957DE /* XCRemoteSwiftPackageReference "swift-dotenv" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/thebarndog/swift-dotenv";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.1;
+			};
+		};
 		8DEF05A52C81FF4400433792 /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/airbnb/lottie-ios.git";
@@ -849,6 +913,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		8DD015122C835BFF006957DE /* SwiftDotenv */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8DD015112C835BFF006957DE /* XCRemoteSwiftPackageReference "swift-dotenv" */;
+			productName = SwiftDotenv;
+		};
 		8DEF05A62C81FF4400433792 /* Lottie */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 8DEF05A52C81FF4400433792 /* XCRemoteSwiftPackageReference "lottie-ios" */;

@@ -7,3 +7,4 @@ build/*
 *.perspective
 *.perspectivev3 # generado por osx
 .DS_Storeprofile
+.env

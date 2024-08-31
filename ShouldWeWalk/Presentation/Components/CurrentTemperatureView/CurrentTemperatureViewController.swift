@@ -16,6 +16,12 @@ class CurrentTemperatureViewController: UIViewController {
     
     @IBOutlet weak var containerView: UIView!
     
+    var viewModel: CurrentTemperatureViewModel? {
+        didSet{
+            updateView()
+        }
+    }
+    
     init() {
            super.init(nibName: "CurrentTemperatureView", bundle: nil)
        }
@@ -27,18 +33,19 @@ class CurrentTemperatureViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        containerView.backgroundColor = .orange
-        animationView.backgroundColor = .clear
-        // 1. Set animation content mode
-        animationView.contentMode = .scaleAspectFit
+        updateView()
+  
+    }
+    
+    private func updateView() {
+        guard let viewModel = viewModel else { return }
         
-        // 2. Set animation loop mode
-        animationView.loopMode = .loop
-        
-        // 3. Adjust animation speed
+        // Actualizar la vista con los datos del ViewModel
+        temperatureLabel.text = viewModel.temperature
+        containerView.backgroundColor = viewModel.bgColor
+        // MARK -- 
+        animationView = LottieAnimationView(name: viewModel.animationName)
         animationView.animationSpeed = 0.5
-        
-        // 4. Play animation
         animationView.play()
     }
     
