@@ -21,7 +21,11 @@
 		8DEF05A42C81FBC600433792 /* CurrentTemperatureView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8DEF05A32C81FBC600433792 /* CurrentTemperatureView.xib */; };
 		8DEF05A72C81FF4400433792 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 8DEF05A62C81FF4400433792 /* Lottie */; };
 		8DEF05AA2C82001700433792 /* CurrentTemperatureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DEF05A92C82001700433792 /* CurrentTemperatureViewController.swift */; };
-		8DEF05AC2C82034D00433792 /* heatAnimation.json in Resources */ = {isa = PBXBuildFile; fileRef = 8DEF05AB2C82034D00433792 /* heatAnimation.json */; };
+		8DEF05B02C82874500433792 /* heatAnimationBG.json in Resources */ = {isa = PBXBuildFile; fileRef = 8DEF05AF2C82874500433792 /* heatAnimationBG.json */; };
+		8DEF05B22C828A4000433792 /* DogsData.json in Sources */ = {isa = PBXBuildFile; fileRef = 8DEF05B12C828A4000433792 /* DogsData.json */; };
+		8DEF05B52C833BB300433792 /* Dog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DEF05B42C833BB300433792 /* Dog.swift */; };
+		8DEF05B72C833C9600433792 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DEF05B62C833C9600433792 /* Utils.swift */; };
+		8DEF05B92C833D5B00433792 /* MainScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DEF05B82C833D5B00433792 /* MainScreenViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,7 +65,11 @@
 		8DEF058F2C81F15C00433792 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		8DEF05A32C81FBC600433792 /* CurrentTemperatureView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CurrentTemperatureView.xib; sourceTree = "<group>"; };
 		8DEF05A92C82001700433792 /* CurrentTemperatureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentTemperatureViewController.swift; sourceTree = "<group>"; };
-		8DEF05AB2C82034D00433792 /* heatAnimation.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = heatAnimation.json; sourceTree = "<group>"; };
+		8DEF05AF2C82874500433792 /* heatAnimationBG.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = heatAnimationBG.json; sourceTree = "<group>"; };
+		8DEF05B12C828A4000433792 /* DogsData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = DogsData.json; sourceTree = "<group>"; };
+		8DEF05B42C833BB300433792 /* Dog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dog.swift; sourceTree = "<group>"; };
+		8DEF05B62C833C9600433792 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		8DEF05B82C833D5B00433792 /* MainScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -195,6 +203,7 @@
 		8DEF05962C81F2E000433792 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				8DEF05B82C833D5B00433792 /* MainScreenViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -240,6 +249,7 @@
 		8DEF059C2C81F3BC00433792 /* Local */ = {
 			isa = PBXGroup;
 			children = (
+				8DEF05B42C833BB300433792 /* Dog.swift */,
 			);
 			path = Local;
 			sourceTree = "<group>";
@@ -261,6 +271,7 @@
 		8DEF059F2C81F3FC00433792 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				8DEF05B62C833C9600433792 /* Utils.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -276,6 +287,7 @@
 		8DEF05A12C81F9BD00433792 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				8DEF05B32C833B1A00433792 /* DogsDataCell */,
 				8DEF05A82C81FFE000433792 /* CurrentTemperatureView */,
 			);
 			path = Components;
@@ -302,7 +314,7 @@
 		8DEF05AD2C82869700433792 /* Animations */ = {
 			isa = PBXGroup;
 			children = (
-				8DEF05AB2C82034D00433792 /* heatAnimation.json */,
+				8DEF05AF2C82874500433792 /* heatAnimationBG.json */,
 			);
 			path = Animations;
 			sourceTree = "<group>";
@@ -310,8 +322,16 @@
 		8DEF05AE2C8286A200433792 /* LocalData */ = {
 			isa = PBXGroup;
 			children = (
+				8DEF05B12C828A4000433792 /* DogsData.json */,
 			);
 			path = LocalData;
+			sourceTree = "<group>";
+		};
+		8DEF05B32C833B1A00433792 /* DogsDataCell */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DogsDataCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -427,10 +447,10 @@
 			files = (
 				8DEF05902C81F15C00433792 /* .gitignore in Resources */,
 				8DEF05672C81F00200433792 /* Assets.xcassets in Resources */,
+				8DEF05B02C82874500433792 /* heatAnimationBG.json in Resources */,
 				8DEF05A42C81FBC600433792 /* CurrentTemperatureView.xib in Resources */,
 				8DEF056A2C81F00200433792 /* Base in Resources */,
 				8DEF05622C81F00000433792 /* Base in Resources */,
-				8DEF05AC2C82034D00433792 /* heatAnimation.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -455,11 +475,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8DEF05B22C828A4000433792 /* DogsData.json in Sources */,
+				8DEF05B52C833BB300433792 /* Dog.swift in Sources */,
 				8DEF055F2C81F00000433792 /* ViewController.swift in Sources */,
 				8DEF055B2C81F00000433792 /* AppDelegate.swift in Sources */,
 				8DEF055D2C81F00000433792 /* SceneDelegate.swift in Sources */,
+				8DEF05B92C833D5B00433792 /* MainScreenViewModel.swift in Sources */,
 				8DEF05652C81F00000433792 /* ShouldWeWalk.xcdatamodeld in Sources */,
 				8DEF05AA2C82001700433792 /* CurrentTemperatureViewController.swift in Sources */,
+				8DEF05B72C833C9600433792 /* Utils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

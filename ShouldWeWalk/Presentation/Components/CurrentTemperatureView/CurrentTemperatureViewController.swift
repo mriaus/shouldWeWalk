@@ -28,6 +28,7 @@ class CurrentTemperatureViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         containerView.backgroundColor = .orange
+        animationView.backgroundColor = .clear
         // 1. Set animation content mode
         animationView.contentMode = .scaleAspectFit
         

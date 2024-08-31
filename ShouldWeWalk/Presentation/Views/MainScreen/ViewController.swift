@@ -9,8 +9,10 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    
+
     @IBOutlet weak var containerView: UIView!
+    var vm: MainScreenViewModel?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.

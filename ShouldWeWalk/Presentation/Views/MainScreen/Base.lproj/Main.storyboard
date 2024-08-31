@@ -12,7 +12,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ShouldWeWalk" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="ViewController" customModule="ShouldWeWalk" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -20,14 +20,24 @@
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FEj-aX-hUa">
                                 <rect key="frame" x="0.0" y="0.0" width="393" height="299"/>
                             </containerView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="It's safe to take a walk?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iOR-0E-if1">
+                                <rect key="frame" x="108.66666666666669" y="322" width="176" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="iOR-0E-if1" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="27X-Y4-uGo"/>
                             <constraint firstItem="FEj-aX-hUa" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="4fi-Yw-xis"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="iOR-0E-if1" secondAttribute="trailing" id="FnH-Qg-SFr"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="FEj-aX-hUa" secondAttribute="trailing" id="HaY-pb-Y9m"/>
+                            <constraint firstItem="iOR-0E-if1" firstAttribute="top" secondItem="FEj-aX-hUa" secondAttribute="bottom" constant="23" id="Q0N-wB-o9s"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="FEj-aX-hUa" secondAttribute="bottom" constant="519" id="je1-WT-3wE"/>
-                            <constraint firstItem="FEj-aX-hUa" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="-59" id="rZD-dE-m4K"/>
+                            <constraint firstItem="iOR-0E-if1" firstAttribute="centerX" secondItem="FEj-aX-hUa" secondAttribute="centerX" id="rNc-Gc-5BB"/>
+                            <constraint firstItem="FEj-aX-hUa" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="zO5-VD-Cak"/>
                         </constraints>
                     </view>
                     <connections>
