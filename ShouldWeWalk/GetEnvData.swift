@@ -12,9 +12,7 @@ final class GetEnvData {
 
     static let shared = GetEnvData()
     
-    
     private init() {
-        // Configura Dotenv para cargar el archivo .env
         do {
             try Dotenv.configure()
         } catch {
@@ -25,6 +23,4 @@ final class GetEnvData {
     var apiKey: String? {
         return Dotenv["API_KEY"]?.stringValue
     }
-
-
 }

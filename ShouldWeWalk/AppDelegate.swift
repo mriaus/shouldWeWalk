@@ -18,7 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         //Configure the env file to get the data
         _ = GetEnvData.shared
-        
+          
         return true
     }
 
