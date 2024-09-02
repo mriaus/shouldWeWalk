@@ -34,7 +34,7 @@
                             </userDefinedRuntimeAttributes>
                         </view>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ºC" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bhr-ki-fKr">
-                            <rect key="frame" x="295" y="137" width="32" height="80"/>
+                            <rect key="frame" x="283" y="137" width="32" height="80"/>
                             <fontDescription key="fontDescription" type="system" pointSize="30"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
@@ -45,11 +45,11 @@
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="30" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C6U-jM-A42">
-                            <rect key="frame" x="187" y="163" width="100" height="80"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="99,9" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C6U-jM-A42">
+                            <rect key="frame" x="187" y="163" width="125" height="80"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="80" id="6nr-9v-ySH"/>
-                                <constraint firstAttribute="width" constant="100" id="jx3-xJ-ern"/>
+                                <constraint firstAttribute="width" constant="125" id="jx3-xJ-ern"/>
                             </constraints>
                             <fontDescription key="fontDescription" type="system" pointSize="50"/>
                             <nil key="textColor"/>
@@ -59,23 +59,23 @@
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="399" id="9WQ-em-zBl"/>
-                        <constraint firstItem="Bhr-ki-fKr" firstAttribute="leading" secondItem="vEy-eT-8Kh" secondAttribute="leading" constant="295" id="Gwi-Og-THn"/>
+                        <constraint firstItem="Bhr-ki-fKr" firstAttribute="leading" secondItem="vEy-eT-8Kh" secondAttribute="leading" constant="283" id="Gwi-Og-THn"/>
                         <constraint firstItem="hzR-0V-URf" firstAttribute="leading" secondItem="vEy-eT-8Kh" secondAttribute="leading" constant="161" id="M3k-Ss-yzX"/>
-                        <constraint firstItem="Bhr-ki-fKr" firstAttribute="leading" secondItem="WXZ-QL-K6t" secondAttribute="trailing" constant="122" id="NJk-4I-KJg"/>
+                        <constraint firstItem="Bhr-ki-fKr" firstAttribute="leading" secondItem="WXZ-QL-K6t" secondAttribute="trailing" constant="110" id="NJk-4I-KJg"/>
                         <constraint firstItem="hzR-0V-URf" firstAttribute="top" secondItem="vEy-eT-8Kh" secondAttribute="top" constant="88" id="Nim-x5-34a"/>
                         <constraint firstItem="WXZ-QL-K6t" firstAttribute="centerY" secondItem="C6U-jM-A42" secondAttribute="centerY" id="Pky-35-7QG"/>
                         <constraint firstAttribute="bottom" secondItem="Bhr-ki-fKr" secondAttribute="bottom" constant="82" id="Qtz-Ft-XLv"/>
                         <constraint firstItem="C6U-jM-A42" firstAttribute="leading" secondItem="vEy-eT-8Kh" secondAttribute="leading" constant="187" id="Y6F-0C-pfZ"/>
                         <constraint firstItem="WXZ-QL-K6t" firstAttribute="leading" secondItem="vEy-eT-8Kh" secondAttribute="leading" constant="42" id="aT3-fV-qup"/>
                         <constraint firstAttribute="bottom" secondItem="C6U-jM-A42" secondAttribute="bottom" constant="56" id="acI-36-q16"/>
-                        <constraint firstAttribute="trailing" secondItem="Bhr-ki-fKr" secondAttribute="trailing" constant="72" id="alq-uQ-I0i"/>
+                        <constraint firstAttribute="trailing" secondItem="Bhr-ki-fKr" secondAttribute="trailing" constant="84" id="alq-uQ-I0i"/>
                         <constraint firstItem="Bhr-ki-fKr" firstAttribute="top" secondItem="vEy-eT-8Kh" secondAttribute="top" constant="137" id="cvv-MN-qz5"/>
-                        <constraint firstItem="Bhr-ki-fKr" firstAttribute="leading" secondItem="vEy-eT-8Kh" secondAttribute="leading" constant="295" id="dD5-o3-wWW"/>
+                        <constraint firstItem="Bhr-ki-fKr" firstAttribute="leading" secondItem="vEy-eT-8Kh" secondAttribute="leading" constant="283" id="dD5-o3-wWW"/>
                         <constraint firstAttribute="bottom" secondItem="Bhr-ki-fKr" secondAttribute="bottom" constant="82" id="gSG-9e-ksJ"/>
                         <constraint firstItem="C6U-jM-A42" firstAttribute="top" secondItem="vEy-eT-8Kh" secondAttribute="top" constant="163" id="mSX-K5-HDl"/>
                         <constraint firstItem="Bhr-ki-fKr" firstAttribute="top" secondItem="vEy-eT-8Kh" secondAttribute="top" constant="137" id="mx0-a9-l95"/>
-                        <constraint firstAttribute="trailing" secondItem="C6U-jM-A42" secondAttribute="trailing" constant="112" id="pUC-Jq-TEN"/>
-                        <constraint firstAttribute="trailing" secondItem="Bhr-ki-fKr" secondAttribute="trailing" constant="72" id="suj-ba-pbX"/>
+                        <constraint firstAttribute="trailing" secondItem="C6U-jM-A42" secondAttribute="trailing" constant="87" id="pUC-Jq-TEN"/>
+                        <constraint firstAttribute="trailing" secondItem="Bhr-ki-fKr" secondAttribute="trailing" constant="84" id="suj-ba-pbX"/>
                         <constraint firstItem="WXZ-QL-K6t" firstAttribute="top" secondItem="vEy-eT-8Kh" secondAttribute="top" constant="139" id="vHi-VB-ibg"/>
                     </constraints>
                 </view>

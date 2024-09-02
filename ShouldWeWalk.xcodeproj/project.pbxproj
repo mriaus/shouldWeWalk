@@ -42,6 +42,7 @@
 		8DF50E412C862A8B00F696BA /* Extension+URLResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF50E402C862A8B00F696BA /* Extension+URLResponse.swift */; };
 		8DF50E432C862A9C00F696BA /* NetworkConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF50E422C862A9C00F696BA /* NetworkConstants.swift */; };
 		8DF50E452C862AAE00F696BA /* GetEnvData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF50E442C862AAE00F696BA /* GetEnvData.swift */; };
+		8DF50E472C862C2E00F696BA /* .env in Resources */ = {isa = PBXBuildFile; fileRef = 8DF50E462C862C2E00F696BA /* .env */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -99,6 +100,7 @@
 		8DF50E402C862A8B00F696BA /* Extension+URLResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Extension+URLResponse.swift"; path = "ShouldWeWalk/Extension+URLResponse.swift"; sourceTree = SOURCE_ROOT; };
 		8DF50E422C862A9C00F696BA /* NetworkConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NetworkConstants.swift; path = ShouldWeWalk/NetworkConstants.swift; sourceTree = SOURCE_ROOT; };
 		8DF50E442C862AAE00F696BA /* GetEnvData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GetEnvData.swift; path = ShouldWeWalk/GetEnvData.swift; sourceTree = SOURCE_ROOT; };
+		8DF50E462C862C2E00F696BA /* .env */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .env; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,6 +141,7 @@
 		8DEF054E2C81F00000433792 = {
 			isa = PBXGroup;
 			children = (
+				8DF50E462C862C2E00F696BA /* .env */,
 				8DEF058F2C81F15C00433792 /* .gitignore */,
 				8DEF05592C81F00000433792 /* ShouldWeWalk */,
 				8DEF05732C81F00200433792 /* ShouldWeWalkTests */,
@@ -504,6 +507,7 @@
 				8DF50E3B2C862A4E00F696BA /* LaunchScreen.storyboard in Resources */,
 				8DEF05902C81F15C00433792 /* .gitignore in Resources */,
 				8DF50E332C8629DC00F696BA /* DogsData.json in Resources */,
+				8DF50E472C862C2E00F696BA /* .env in Resources */,
 				8DF50E352C8629EA00F696BA /* WeatherMockedData.json in Resources */,
 				8DF50E252C86297100F696BA /* Assets.xcassets in Resources */,
 				8DF50E372C862A1800F696BA /* Main.storyboard in Resources */,

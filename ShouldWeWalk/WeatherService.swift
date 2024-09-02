@@ -30,7 +30,7 @@ struct WeatherService {
         guard let url = components?.url else {
                   fatalError("URL inválida")
               }
-        
+
         var request: URLRequest = URLRequest(url: url)
         request.httpMethod = HTTPMETHODS.get
         
@@ -38,15 +38,15 @@ struct WeatherService {
         request.setValue("application/json", forHTTPHeaderField: "Accept")
         
         return URLSession.shared.dataTaskPublisher(for: request)
-                    .tryMap { data, response in
-                        guard let httpResponse = response as? HTTPURLResponse, httpResponse.statusCode == 200 else {
-                            throw URLError(.badServerResponse)
-                        }
-                        return data
+                .tryMap { data, response in
+                    guard let httpResponse = response as? HTTPURLResponse, httpResponse.statusCode == 200 else {
+                        throw URLError(.badServerResponse)
                     }
-                    .decode(type: WeatherDTO.self, decoder: JSONDecoder())
-                    .receive(on: DispatchQueue.main)
-                    .eraseToAnyPublisher()
+                    return data
+                }
+                .decode(type: WeatherDTO.self, decoder: JSONDecoder())
+                .receive(on: DispatchQueue.main)
+                .eraseToAnyPublisher()
     }
 }
 

@@ -11,7 +11,7 @@ import Combine
 final class GetWeatherUseCase: GetWeatherProtocol {
         
     func getWeather(lat: String, long: String) -> AnyPublisher<WeatherDTO, any Error> {
-        return WeatherRepository(isMocked: true).getWeather(lat: lat, long: long)
+        return WeatherRepository(isMocked: false).getWeather(lat: lat, long: long)
     }
     
     

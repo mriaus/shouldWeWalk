@@ -69,11 +69,14 @@ class MainScreenViewModel {
                   guard let self = self else { return }
                   self.isLoading = false
                   if case let .failure(error) = completion {
-                      print(error.localizedDescription)
+                      print("Peta esto \(error.localizedDescription)")
+                      print("Error completo: \(error)")
                   }
               }, receiveValue: { [weak self] weatherDTO in
-                  print("Temperature -> \(self?.transformWeatherToTemperature(weatherDTO: weatherDTO))")
+                  print("temp -> \(String(describing: self?.temperature))")
+
                   self?.temperature = self?.transformWeatherToTemperature(weatherDTO: weatherDTO) ?? ""
+                  print("temp -> \(String(describing: self?.temperature))")
               })
               .store(in: &cancellables)
       }

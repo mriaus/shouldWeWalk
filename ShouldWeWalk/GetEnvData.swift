@@ -14,10 +14,14 @@ final class GetEnvData {
     
     private init() {
         do {
-            try Dotenv.configure()
+            // Usa la ruta relativa si el archivo .env está en la raíz del proyecto
+            let path = Bundle.main.path(forResource: ".env", ofType: nil) ?? ""
+            try Dotenv.configure(atPath: path)
+            print("Dotenv configurado correctamente")
         } catch {
             print("Error al configurar Dotenv: \(error)")
         }
+
     }
 
     var apiKey: String? {

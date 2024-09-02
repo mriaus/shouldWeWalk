@@ -16,7 +16,7 @@ struct WeatherDTO: Decodable {
     let rain: Rain?
     let clouds: Clouds
     let dt: Int
-    let sys: Sys
+    let sys: Sys?
     let timezone, id: Int
     let name: String
     let cod: Int
@@ -36,6 +36,17 @@ struct Coord: Decodable {
 struct Main: Decodable {
     let temp, feelsLike, tempMin, tempMax: Double
     let pressure, humidity, seaLevel, grndLevel: Int
+    
+    enum CodingKeys: String, CodingKey {
+         case temp
+         case feelsLike = "feels_like"
+         case tempMin = "temp_min"
+         case tempMax = "temp_max"
+         case pressure
+         case humidity
+         case seaLevel = "sea_level"
+         case grndLevel = "grnd_level"
+     }
 }
 
 // MARK: - Rain
@@ -49,17 +60,17 @@ struct Rain: Decodable {
 
 // MARK: - Sys
 struct Sys: Decodable {
-    let type, id: Int
-    let country: String
-    let sunrise, sunset: Int
+    let type, id: Int?
+    let country: String?
+    let sunrise, sunset: Int?
 }
 
 // MARK: - Weather
 struct Weather: Decodable {
-    let id: Int
-    let main: String
-    let weatherDescription: String
-    let icon: String
+    let id: Int?
+    let main: String?
+    let weatherDescription: String?
+    let icon: String?
     
     enum CodingKeys: String, CodingKey {
         case id, main
@@ -74,3 +85,5 @@ struct Wind: Decodable {
     let deg: Int
     let gust: Double?
 }
+
+
