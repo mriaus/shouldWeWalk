@@ -8,5 +8,5 @@
 import Foundation
 import Combine
 protocol GetWeatherProtocol {
-    func getWeather(lat: String, long: String) -> AnyPublisher<WeatherModel, Error>
+    func getWeather(lat: String, long: String) -> AnyPublisher<WeatherDTO, Error>
 }

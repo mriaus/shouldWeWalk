@@ -42,17 +42,17 @@ class CurrentTemperatureViewModel {
     static func setAnimationName(condition: Int) -> String {
         switch condition {
         case 30...:
-            return ""
+            return "heatAnimationBG"
         case 26...29:
-            return ""
+            return "heatAnimationBG"
         case 22...25:
-            return ""
+            return "heatAnimationBG"
         case 7...21:
-            return ""
+            return "heatAnimationBG"
         case -4...6:
-            return ""
+            return "heatAnimationBG"
         default:
-            return ""
+            return "heatAnimationBG"
         }
     }
     

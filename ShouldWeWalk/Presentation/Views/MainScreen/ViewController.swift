@@ -6,42 +6,67 @@
 //
 
 import UIKit
+import Combine
 
 class ViewController: UIViewController {
     
 
+    @IBOutlet weak var temperatureTest: UILabel!
     @IBOutlet weak var containerView: UIView!
     var vm: MainScreenViewModel?
+    private var cancellables = Set<AnyCancellable>()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
         
+        // TODO: pass the Repository
+        let getWeatherUseCase = GetWeatherUseCase()
+        //vm = MainScreenViewModel(getWeatherUseCase: getWeatherUseCase)
+        
+        setupBindings()
+        vm?.fetchWeather(lat: "40.4168", long: "-3.7038")
+
 
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-          super.viewDidAppear(animated)
-          
-          // Presenta el CurrentTemperatureViewController cuando la vista ya está en la jerarquía
-          let temperatureViewController = CurrentTemperatureViewController()
-       
-        temperatureViewController.view.frame = containerView.bounds
-                containerView.addSubview(temperatureViewController.view)
-        
-        temperatureViewController.view.translatesAutoresizingMaskIntoConstraints = false
-        
-        NSLayoutConstraint.activate([
-               temperatureViewController.view.leadingAnchor.constraint(equalTo: containerView.leadingAnchor),
-               temperatureViewController.view.trailingAnchor.constraint(equalTo: containerView.trailingAnchor),
-               temperatureViewController.view.topAnchor.constraint(equalTo: containerView.topAnchor),
-               temperatureViewController.view.bottomAnchor.constraint(equalTo: containerView.bottomAnchor)
-           ])
-
-           // Notificar al CurrentTemperatureViewController que fue agregado como hijo
-           temperatureViewController.didMove(toParent: self)
-      }
-
+    private func setupBindings() {
+            vm?.$temperature
+                .receive(on: RunLoop.main)
+                .sink { [weak self] temperature in
+                    guard let self = self else { return }
+                    
+                    // Configurar y presentar el CurrentTemperatureViewController
+                    let temperatureViewController = CurrentTemperatureViewController()
+                    
+                    // Configurar el ViewModel para el CurrentTemperatureViewController
+                    print("Temperature main vc -> \(temperature)")
+                    let temperatureViewModel = CurrentTemperatureViewModel(
+                        temperature: temperature,
+                        scale: "ºC", // o lo que sea necesario
+                        bgColor: UIColor.clear, // Establecer el color por defecto
+                        animationName: "" // Nombre de animación por defecto
+                    )
+                    
+                    temperatureViewController.viewModel = temperatureViewModel
+                    
+                    self.addChild(temperatureViewController)
+                                   temperatureViewController.view.frame = self.containerView.bounds
+                                   self.containerView.addSubview(temperatureViewController.view)
+                                   
+                                   temperatureViewController.view.translatesAutoresizingMaskIntoConstraints = false
+                                   
+                                   NSLayoutConstraint.activate([
+                                       temperatureViewController.view.leadingAnchor.constraint(equalTo: self.containerView.leadingAnchor),
+                                       temperatureViewController.view.trailingAnchor.constraint(equalTo: self.containerView.trailingAnchor),
+                                       temperatureViewController.view.topAnchor.constraint(equalTo: self.containerView.topAnchor),
+                                       temperatureViewController.view.bottomAnchor.constraint(equalTo: self.containerView.bottomAnchor)
+                                   ])
+                    
+                    // Notificar al CurrentTemperatureViewController que fue agregado como hijo
+                    temperatureViewController.didMove(toParent: self)
+                }
+                .store(in: &cancellables)
+        }
 
 }
 

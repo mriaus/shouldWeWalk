@@ -17,10 +17,14 @@ class CurrentTemperatureViewController: UIViewController {
     @IBOutlet weak var containerView: UIView!
     
     var viewModel: CurrentTemperatureViewModel? {
-        didSet{
-            updateView()
-        }
-    }
+           didSet {
+               // Actualizar la vista si la vista ya ha sido cargada
+               if isViewLoaded {
+                   updateView()
+               }
+           }
+       }
+       
     
     init() {
            super.init(nibName: "CurrentTemperatureView", bundle: nil)
@@ -38,16 +42,27 @@ class CurrentTemperatureViewController: UIViewController {
     }
     
     private func updateView() {
-        guard let viewModel = viewModel else { return }
-        
-        // Actualizar la vista con los datos del ViewModel
-        temperatureLabel.text = viewModel.temperature
-        containerView.backgroundColor = viewModel.bgColor
-        // MARK -- 
-        animationView = LottieAnimationView(name: viewModel.animationName)
-        animationView.animationSpeed = 0.5
-        animationView.play()
-    }
+           guard let viewModel = viewModel else { return }
+           
+           // Actualizar la vista con los datos del ViewModel
+           temperatureLabel.text = viewModel.temperature
+           teperatureTypeLabel.text = viewModel.scale
+           containerView.backgroundColor = viewModel.bgColor
+           
+           // Asegúrate de que `animationView` esté correctamente inicializado
+           if !viewModel.animationName.isEmpty {
+                    // Asegúrate de que animationView esté inicializado
+                    if animationView == nil {
+                        animationView = LottieAnimationView(name: viewModel.animationName)
+                    } else {
+                        animationView.animation = LottieAnimation.named(viewModel.animationName)
+                    }
+                    animationView.animationSpeed = 0.5
+               animationView.loopMode = .loop
+               animationView.backgroundColor = .clear
+                    animationView.play()
+                }
+       }
     
     override func viewDidDisappear(_ animated: Bool) {
         animationView.stop()

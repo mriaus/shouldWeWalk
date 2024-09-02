@@ -22,6 +22,7 @@ struct WeatherService {
         components?.queryItems = [
                 URLQueryItem(name: "lat", value: lat),
                 URLQueryItem(name: "lon", value: long),
+                URLQueryItem(name: "units", value: "metric"),
                 URLQueryItem(name: "appid", value: apiKey)
         ]
         
