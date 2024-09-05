@@ -9,7 +9,11 @@ import Foundation
 import UIKit
 
 class CurrentTemperatureViewModel {
-    var temperature: String
+    var temperature: String {
+            didSet {
+                updateProperties()
+            }
+        }
     var scale: String
     var bgColor: UIColor
     var animationName: String
@@ -17,11 +21,11 @@ class CurrentTemperatureViewModel {
     init(temperature: String, scale: String, bgColor: UIColor, animationName: String) {
         self.temperature = temperature
         self.scale = scale
-        self.bgColor = CurrentTemperatureViewModel.setBGColor(condition: Int(temperature) ?? 0)
-        self.animationName = CurrentTemperatureViewModel.setAnimationName(condition: Int(temperature) ?? 0)
+        self.bgColor = CurrentTemperatureViewModel.setBGColor(condition: Double(temperature) ?? 0.0)
+        self.animationName = CurrentTemperatureViewModel.setAnimationName(condition: Double(temperature) ?? 0.0)
     }
     
-    static func setBGColor(condition: Int) -> UIColor {
+    static func setBGColor(condition: Double) -> UIColor {
         switch condition {
         case 30...:
             return .red
@@ -39,7 +43,7 @@ class CurrentTemperatureViewModel {
     }
     
     
-    static func setAnimationName(condition: Int) -> String {
+    static func setAnimationName(condition: Double) -> String {
         switch condition {
         case 30...:
             return "heatAnimationBG"
@@ -56,5 +60,10 @@ class CurrentTemperatureViewModel {
         }
     }
     
+    private func updateProperties() {
+        guard let temp = Double(temperature) else { return }
+        self.bgColor = CurrentTemperatureViewModel.setBGColor(condition: temp)
+        self.animationName = CurrentTemperatureViewModel.setAnimationName(condition: temp)
+    }
     
 }

@@ -11,7 +11,6 @@ import Combine
 class ViewController: UIViewController {
     
 
-    @IBOutlet weak var temperatureTest: UILabel!
     @IBOutlet weak var containerView: UIView!
     var vm: MainScreenViewModel?
     private var cancellables = Set<AnyCancellable>()
