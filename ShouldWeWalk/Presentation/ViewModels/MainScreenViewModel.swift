@@ -14,18 +14,20 @@ class MainScreenViewModel {
     @Published var temperature: String = ""
     @Published var isLoading: Bool = true
     @Published var isLocationServiceEnabled: Bool = false
-
+    @Published var dogsTypes: Dogs = []
     
     private let getWeatherUseCase: GetWeatherUseCase
     private let locationUseCase: GetCurrentLocationUseCase
+    private let loadDogsDataUseCase: GetDogsDataUseCase
     private var cancellables = Set<AnyCancellable>()
     
-    init(getWeatherUseCase: GetWeatherUseCase, locationUseCase: GetCurrentLocationUseCase) {
+    init(getWeatherUseCase: GetWeatherUseCase, locationUseCase: GetCurrentLocationUseCase, loadDogsDataUseCase: GetDogsDataUseCase) {
         self.getWeatherUseCase = getWeatherUseCase
         self.locationUseCase = locationUseCase
-        print("Entra0")
+        self.loadDogsDataUseCase = loadDogsDataUseCase
 
         setupLocationService()
+        loadDogsTypesFromLocal()
     }
     
     func setupLocationService() {
@@ -62,21 +64,17 @@ class MainScreenViewModel {
           isLoading = true
           let lat = "\(location.coordinate.latitude)"
           let long = "\(location.coordinate.longitude)"
-          print("lat -> \(location.coordinate.latitude)")
-          print("lon -> \(location.coordinate.longitude)")
+
           getWeatherUseCase.getWeather(lat: lat, long: long)
               .sink(receiveCompletion: { [weak self] completion in
                   guard let self = self else { return }
                   self.isLoading = false
                   if case let .failure(error) = completion {
-                      print("Peta esto \(error.localizedDescription)")
-                      print("Error completo: \(error)")
+                      print("Localizated error \(error.localizedDescription)")
+                      print("Complete Error: \(error)")
                   }
               }, receiveValue: { [weak self] weatherDTO in
-                  print("temp -> \(String(describing: self?.temperature))")
-
                   self?.temperature = self?.transformWeatherToTemperature(weatherDTO: weatherDTO) ?? ""
-                  print("temp -> \(String(describing: self?.temperature))")
               })
               .store(in: &cancellables)
       }
@@ -84,8 +82,17 @@ class MainScreenViewModel {
     
     
     private func transformWeatherToTemperature(weatherDTO: WeatherDTO) -> String{
-        print("WeatherDTO -> \(weatherDTO)")
         return String(weatherDTO.main.temp)
-        
     }
+    
+    private func loadDogsTypesFromLocal() {
+        dogsTypes =  loadDogsDataUseCase.getDogs()
+        print("dogsTypes \(dogsTypes)")
+    }
+    
+    func loadDogTypeByIndex(index: Int) -> Dog{
+        dogsTypes[index]
+    }
+    
+    
 }

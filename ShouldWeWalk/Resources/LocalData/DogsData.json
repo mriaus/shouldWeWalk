@@ -1,29 +1,34 @@
 
 
-{
-    "Big": {
+[
+     {
+        "id": "1",
+        "type": "Grande",
         "maxTemp": "29",
-        "minTemp": "2",
-        "moderateTemp": "",
-        "riskTemp": ""
-        "goodTemp": "",
-        "image": ""
+        "minTemp": "4",
+        "moderateTemp": "18",
+        "riskTemp": "21",
+        "goodTemp": "15",
+        "image": "bigDog"
     },
-    "medium": {
-        "maxTemp": "29",
-        "minTemp": "2",
-        "moderateTemp": "",
-        "riskTemp": ""
-        "goodTemp": "",
-        "image": ""
+     {
+        "id": "2",
+        "type": "Mediano",
+        "maxTemp": "32",
+        "minTemp": "7",
+        "moderateTemp": "21",
+        "riskTemp": "29",
+        "goodTemp": "18",
+        "image": "mediumDog"
+    },
+     {
+        "id": "3",
+        "type": "Pequeño",
+        "maxTemp": "32",
+        "minTemp": "7",
+        "moderateTemp": "21",
+        "riskTemp": "29",
+        "goodTemp": "18",
+        "image": "smallDog"
     }
-    "small": {
-        "maxTemp": "29",
-        "minTemp": "2",
-        "moderateTemp": "",
-        "tooLowTemp": "",
-        "riskTemp": "",
-        "goodTemp": "",
-        "image": ""
-    }
-}
+]
