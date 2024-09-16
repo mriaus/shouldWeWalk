@@ -102,7 +102,7 @@
 		8DF50E342C8629EA00F696BA /* WeatherMockedData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = WeatherMockedData.json; path = ShouldWeWalk/WeatherMockedData.json; sourceTree = SOURCE_ROOT; };
 		8DF50E362C862A1800F696BA /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = ShouldWeWalk/Main.storyboard; sourceTree = SOURCE_ROOT; };
 		8DF50E3A2C862A4E00F696BA /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = ShouldWeWalk/Presentation/Views/LaunchScreen/LaunchScreen.storyboard; sourceTree = SOURCE_ROOT; };
-		8DF50E3C2C862A6800F696BA /* WeatherService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WeatherService.swift; path = ShouldWeWalk/WeatherService.swift; sourceTree = SOURCE_ROOT; };
+		8DF50E3C2C862A6800F696BA /* WeatherService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WeatherService.swift; path = ShouldWeWalk/Network/Services/WeatherService.swift; sourceTree = SOURCE_ROOT; };
 		8DF50E3E2C862A7700F696BA /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Utils.swift; path = ShouldWeWalk/Utils.swift; sourceTree = SOURCE_ROOT; };
 		8DF50E402C862A8B00F696BA /* Extension+URLResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Extension+URLResponse.swift"; path = "ShouldWeWalk/Extension+URLResponse.swift"; sourceTree = SOURCE_ROOT; };
 		8DF50E422C862A9C00F696BA /* NetworkConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NetworkConstants.swift; path = ShouldWeWalk/NetworkConstants.swift; sourceTree = SOURCE_ROOT; };
@@ -138,7 +138,7 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		8DD015062C8354A4006957DE /* Services */ = {
+		8DB777842C9834CF00A4ADA7 /* Services */ = {
 			isa = PBXGroup;
 			children = (
 				8DF50E3C2C862A6800F696BA /* WeatherService.swift */,
@@ -271,7 +271,7 @@
 		8DEF059E2C81F3E000433792 /* Network */ = {
 			isa = PBXGroup;
 			children = (
-				8DD015062C8354A4006957DE /* Services */,
+				8DB777842C9834CF00A4ADA7 /* Services */,
 			);
 			path = Network;
 			sourceTree = "<group>";
