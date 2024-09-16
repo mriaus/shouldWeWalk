@@ -67,8 +67,8 @@ class ViewController: UIViewController {
     private func setupTableView() {
         let nib = UINib(nibName: "DogsDataCell", bundle: nil)
         tableView.register(nib, forCellReuseIdentifier: "DogsDataCell")
-
-        tableView.rowHeight = 150
+        tableView.allowsSelection = false
+        tableView.rowHeight = 100
     }
 
 }

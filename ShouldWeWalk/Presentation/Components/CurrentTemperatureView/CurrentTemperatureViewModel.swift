@@ -32,13 +32,13 @@ class CurrentTemperatureViewModel {
         case 26...29:
             return .orange
         case 22...25:
-            return .green
+            return .orange
         case 7...21:
-            return .blue
+            return .green
         case -4...6:
             return .cyan
         default:
-            return .gray
+            return .cyan
         }
     }
     
