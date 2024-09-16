@@ -20,7 +20,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         let screen = UIStoryboard(name: "Main", bundle: .main)
         let rootViewController = screen.instantiateViewController(withIdentifier: "ViewController") as? ViewController
-        rootViewController?.vm = MainScreenViewModel(getWeatherUseCase: GetWeatherUseCase(), locationUseCase: GetCurrentLocationUseCase(locationService: LocationManager()))
+        rootViewController?.vm = MainScreenViewModel(getWeatherUseCase: GetWeatherUseCase(), locationUseCase: GetCurrentLocationUseCase(locationService: LocationManager()),
+        loadDogsDataUseCase: GetDogsDataUseCase())
         
         window = UIWindow(windowScene: windowScene)
         window?.rootViewController = UINavigationController(rootViewController: rootViewController ?? UIViewController())
