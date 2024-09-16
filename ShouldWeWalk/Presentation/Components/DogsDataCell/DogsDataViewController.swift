@@ -11,9 +11,11 @@ import UIKit
 class DogsDataViewController: UITableViewCell {
     
     @IBOutlet weak var cellImage: UIImageView!
+    
     @IBOutlet weak var minTemperatureLabel: UILabel!
     @IBOutlet weak var maxTemperatureLabel: UILabel!
-    
+    @IBOutlet weak var goodTemperatureLabel: UILabel!
+    @IBOutlet weak var riskTemperatureLabel: UILabel!
     static let identifier: String = "DogsDataCell"
     static let estimatedHeight: CGFloat = 100
     
@@ -21,6 +23,11 @@ class DogsDataViewController: UITableViewCell {
         super.awakeFromNib()
         
         cellImage.clipsToBounds = true
+        minTemperatureLabel.textColor = .cyan
+        maxTemperatureLabel.textColor = .red
+        goodTemperatureLabel.textColor = .green
+        riskTemperatureLabel.textColor = .orange
+
     }
     
     override func prepareForReuse() {
@@ -28,11 +35,18 @@ class DogsDataViewController: UITableViewCell {
             minTemperatureLabel.text = nil
             cellImage.image = UIImage(named: "mediumDog")
             maxTemperatureLabel.text = nil
+            goodTemperatureLabel.text = nil
+            riskTemperatureLabel.text = nil
+
+       
         }
     
-    func updateView(photo: String? = nil, minTemperature: String? = nil, maxTemperature: String? = nil) {
+    func updateView(photo: String? = nil, minTemperature: String? = nil, maxTemperature: String? = nil, riskTemperature: String? = nil, goodTemperature: String? = nil) {
         self.cellImage.image = UIImage(named: photo ?? "mediumDog")
         self.minTemperatureLabel.text = minTemperature
         self.maxTemperatureLabel.text = maxTemperature
+        self.riskTemperatureLabel.text = riskTemperature
+        self.goodTemperatureLabel.text = goodTemperature
+
        }
 }

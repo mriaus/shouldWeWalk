@@ -93,7 +93,7 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
             }
             
         if let dogType = vm?.loadDogTypeByIndex(index: indexPath.row) {
-            cell.updateView(photo:dogType.image , minTemperature: dogType.minTemp, maxTemperature: dogType.maxTemp)
+            cell.updateView(photo:dogType.image , minTemperature: dogType.minTemp, maxTemperature: dogType.maxTemp, riskTemperature: dogType.riskTemp, goodTemperature: dogType.goodTemp)
             }
 
         
