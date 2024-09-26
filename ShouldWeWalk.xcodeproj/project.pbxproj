@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8DC842222CA0350400FB3C49 /* Bolita.json in Resources */ = {isa = PBXBuildFile; fileRef = 8DC842212CA0350400FB3C49 /* Bolita.json */; };
+		8DC842262CA5875900FB3C49 /* Extension+UILabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DC842252CA5875900FB3C49 /* Extension+UILabel.swift */; };
 		8DD015132C835BFF006957DE /* SwiftDotenv in Frameworks */ = {isa = PBXBuildFile; productRef = 8DD015122C835BFF006957DE /* SwiftDotenv */; };
 		8DEF055B2C81F00000433792 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DEF055A2C81F00000433792 /* AppDelegate.swift */; };
 		8DEF055D2C81F00000433792 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DEF055C2C81F00000433792 /* SceneDelegate.swift */; };
@@ -67,6 +69,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8DC842212CA0350400FB3C49 /* Bolita.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Bolita.json; sourceTree = "<group>"; };
+		8DC842252CA5875900FB3C49 /* Extension+UILabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+UILabel.swift"; sourceTree = "<group>"; };
 		8DEF05572C81F00000433792 /* ShouldWeWalk.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShouldWeWalk.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8DEF055A2C81F00000433792 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8DEF055C2C81F00000433792 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -283,6 +287,7 @@
 				8DF50E422C862A9C00F696BA /* NetworkConstants.swift */,
 				8DF50E402C862A8B00F696BA /* Extension+URLResponse.swift */,
 				8DF50E3E2C862A7700F696BA /* Utils.swift */,
+				8DC842252CA5875900FB3C49 /* Extension+UILabel.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -326,6 +331,7 @@
 		8DEF05AD2C82869700433792 /* Animations */ = {
 			isa = PBXGroup;
 			children = (
+				8DC842212CA0350400FB3C49 /* Bolita.json */,
 				8DF50E302C8629D100F696BA /* heatAnimationBG.json */,
 			);
 			path = Animations;
@@ -521,6 +527,7 @@
 				8DF50E332C8629DC00F696BA /* DogsData.json in Resources */,
 				8DF50E472C862C2E00F696BA /* .env in Resources */,
 				8DF195F02C970FD200A1870F /* DogsDataCell.xib in Resources */,
+				8DC842222CA0350400FB3C49 /* Bolita.json in Resources */,
 				8DF50E4A2C9096BF00F696BA /* Assets.xcassets in Resources */,
 				8DF50E352C8629EA00F696BA /* WeatherMockedData.json in Resources */,
 				8DF50E372C862A1800F696BA /* Main.storyboard in Resources */,
@@ -558,6 +565,7 @@
 				8DF195F22C97103E00A1870F /* DogsDataViewController.swift in Sources */,
 				8DF50E452C862AAE00F696BA /* GetEnvData.swift in Sources */,
 				8DF50E3D2C862A6800F696BA /* WeatherService.swift in Sources */,
+				8DC842262CA5875900FB3C49 /* Extension+UILabel.swift in Sources */,
 				8DEF055B2C81F00000433792 /* AppDelegate.swift in Sources */,
 				8DEF055D2C81F00000433792 /* SceneDelegate.swift in Sources */,
 				8DEF05652C81F00000433792 /* ShouldWeWalk.xcdatamodeld in Sources */,

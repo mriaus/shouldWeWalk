@@ -68,6 +68,7 @@ class ViewController: UIViewController {
         let nib = UINib(nibName: "DogsDataCell", bundle: nil)
         tableView.register(nib, forCellReuseIdentifier: "DogsDataCell")
         tableView.allowsSelection = false
+        tableView.bounces = false
         tableView.rowHeight = 100
     }
 

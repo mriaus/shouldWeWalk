@@ -15,30 +15,32 @@ class CurrentTemperatureViewModel {
             }
         }
     var scale: String
-    var bgColor: UIColor
     var animationName: String
+    var bgImage: UIImage
     
     init(temperature: String, scale: String, bgColor: UIColor, animationName: String) {
         self.temperature = temperature
         self.scale = scale
-        self.bgColor = CurrentTemperatureViewModel.setBGColor(condition: Double(temperature) ?? 0.0)
         self.animationName = CurrentTemperatureViewModel.setAnimationName(condition: Double(temperature) ?? 0.0)
+        self.bgImage = CurrentTemperatureViewModel.setBGImage(condition: Double(temperature) ?? 0.0)
     }
     
-    static func setBGColor(condition: Double) -> UIColor {
+
+    
+    static func setBGImage(condition: Double) -> UIImage {
         switch condition {
         case 30...:
-            return .red
+            return UIImage(named: "bgHeat")!
         case 26...29:
-            return .orange
+            return UIImage(named: "bgHeat")!
         case 22...26:
-            return .orange
+            return UIImage(named: "bgImageDefault")!
         case 7...22:
-            return .green
-        case -4...6:
-            return .cyan
+            return UIImage(named: "bgImageDefault")!
+        case -30...6:
+            return UIImage(named: "bgImageWinter")!
         default:
-            return .cyan
+            return UIImage(named: "bgImageDefault")!
         }
     }
     
@@ -46,24 +48,24 @@ class CurrentTemperatureViewModel {
     static func setAnimationName(condition: Double) -> String {
         switch condition {
         case 30...:
-            return "heatAnimationBG"
+            return "Bolita"
         case 26...29:
-            return "heatAnimationBG"
+            return "Bolita"
         case 22...25:
             return "heatAnimationBG"
         case 7...21:
-            return "heatAnimationBG"
+            return "Bolita"
         case -4...6:
-            return "heatAnimationBG"
+            return "Bolita"
         default:
-            return "heatAnimationBG"
+            return "Bolita"
         }
     }
     
     private func updateProperties() {
         guard let temp = Double(temperature) else { return }
-        self.bgColor = CurrentTemperatureViewModel.setBGColor(condition: temp)
         self.animationName = CurrentTemperatureViewModel.setAnimationName(condition: temp)
+        self.bgImage = CurrentTemperatureViewModel.setBGImage(condition: temp)
     }
     
 }

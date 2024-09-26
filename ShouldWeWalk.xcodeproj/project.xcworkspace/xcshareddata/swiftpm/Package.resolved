@@ -1,0 +1,24 @@
+{
+  "originHash" : "c04e5e1970c9b2348548bee01735d79625395b55653c476c98fb0eddb506e66c",
+  "pins" : [
+    {
+      "identity" : "lottie-ios",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/airbnb/lottie-ios.git",
+      "state" : {
+        "revision" : "fe4c6fe3a0aa66cdeb51d549623c82ca9704b9a5",
+        "version" : "4.5.0"
+      }
+    },
+    {
+      "identity" : "swift-dotenv",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/thebarndog/swift-dotenv",
+      "state" : {
+        "revision" : "f6e7ca817d35eeccb20b62c87ee75963b01b29dc",
+        "version" : "2.0.1"
+      }
+    }
+  ],
+  "version" : 3
+}
