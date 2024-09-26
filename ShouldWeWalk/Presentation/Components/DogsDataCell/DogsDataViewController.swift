@@ -23,10 +23,10 @@ class DogsDataViewController: UITableViewCell {
         super.awakeFromNib()
         
         cellImage.clipsToBounds = true
-        minTemperatureLabel.textColor = .cyan
-        maxTemperatureLabel.textColor = .red
-        goodTemperatureLabel.textColor = .green
-        riskTemperatureLabel.textColor = .orange
+        minTemperatureLabel.textColor = UIColor(named: "customBlue")
+        maxTemperatureLabel.textColor = UIColor(named: "customRed")
+        goodTemperatureLabel.textColor = UIColor(named: "customGreen")
+        riskTemperatureLabel.textColor = UIColor(named: "customOrange")
 
     }
     

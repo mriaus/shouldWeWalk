@@ -17,6 +17,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2Fl-ic-FIL">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FEj-aX-hUa">
                                 <rect key="frame" x="0.0" y="0.0" width="393" height="299"/>
                             </containerView>
@@ -53,7 +58,8 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="containerView" destination="FEj-aX-hUa" id="uaC-ab-APO"/>
+                        <outlet property="backgroundView" destination="2Fl-ic-FIL" id="kdo-Gc-kDd"/>
+                        <outlet property="containerView" destination="FEj-aX-hUa" id="OWI-rU-MRv"/>
                         <outlet property="tableView" destination="7fj-xp-2UV" id="OPY-vZ-c54"/>
                     </connections>
                 </viewController>
